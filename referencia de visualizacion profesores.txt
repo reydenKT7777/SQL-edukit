@@ -1,0 +1,20 @@
+admin(NG, NP, NET)				profesor(NG, NP, NP-id, NM-id)   estudiante(NG, NET, NC, NM-id)     tutor(NG, NET, NC-id)
+		
+NG(TODOS)					
+							NM-id(materia)	
+
+NP(PROFESORES)				
+NP-id(profesor_persona)				
+
+NET(E/T)
+
+NT-id(tutor_persona)
+
+NC-id(curso)
+
+
+
+
+paro nacional de maestros convocado por el ministerio de educacion
+
+assets/document/images/comunicado1.png

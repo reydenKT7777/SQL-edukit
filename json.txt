@@ -1,0 +1,3 @@
+$json_msg=file_get_contents('php://input');
+$data=json_decode($json_msg);
+$msg_contenido=$data->msg_contenido;

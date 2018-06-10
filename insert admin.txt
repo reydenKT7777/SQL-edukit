@@ -1,0 +1,8 @@
+INSERT INTO `usuario` (`id`, `nombre_usuario`, `contrasena`, `sesion`, `correo_electronico`, `f_modificacion`, `activacion_cuenta`, `foto_perfil`, `rol`, `estado`) VALUES(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, 'admin@admin.sisa', '2018-04-17 04:00:00', 1, 'assets/images/avatar/20180417admin.jpg', 1, 1);
+
+
+INSERT INTO `persona` (`id`, `a_paterno`, `a_materno`, `nombres`, `ci`, `exp`, `sexo`, `telf`, `telf_opc`, `direccion`, `f_nacimiento`, `estado`, `usuario_id`) VALUES
+(1, 'Rivero', 'Aliaga', 'Raul Mamani', '10000001', 'LP', 'F', '76543210', '', 'no me acuerdo', '2018-04-01', 1, 1);
+
+INSERT INTO `administracion` (`id`, `cargo`, `persona_id`) VALUES
+(1, 'Administrador', 1);
