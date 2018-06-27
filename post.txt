@@ -1,0 +1,46 @@
+public function valida_file_post($file_post)
+	{
+		/*
+		$tipo_file
+		1=img
+		2=pdf/otros documentos
+		*/
+		$error='';
+		$valid=true;
+		$tipo_file='';
+		$conta_img=0;
+		$conta_doc=0;
+		$conta_error=0;
+		for($i=0;$i<count($file_post["name"]);$i++)
+	    {
+	        if($file_post["type"][$i]=="image/jpeg" || $file_post["type"][$i]=="image/jpg" || $file_post["type"][$i]=="image/gif" || $file_post["type"][$i]=="image/png")
+	        {
+	            $conta_img++;
+	        }elseif ($file_post["type"][$i]=="application/pdf" || $file_post["type"][$i] =='application/msword' || $file_post["type"][$i] =='application/vnd.ms-excel' || $file_post["type"][$i] =='application/vnd.ms-powerpoint' || $file_post["type"][$i] =='application/vnd.openxmlformats-officedocument.wordprocessingml.document' || $file_post["type"][$i] =='application/vnd.openxmlformats-officedocument.presentationml.presentation' || $file_post["type"][$i] =='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+	        	$conta_doc++;
+	        }else{
+	           	$conta_error++;
+	       	}
+	    }//fin for
+	    if ($conta_error > 0) {
+	    	$valid=false;
+	    	$error="Solo puede subir imagenes o solo un documento (Pdf, Word, Excel, PowerPoint)";
+	    }else{
+	    	if ($conta_img == 0 && $conta_doc > 0) {
+	    		if ($conta_doc==1) {
+	    			$valid=true;
+	    			$tipo_file=2;
+		        }else{
+		        	$valid=false;
+		        	$error="Solo puede subir un solo documento (Pdf, Word, Excel, PowerPoint)";
+		        }
+	    	}elseif ($conta_img > 0 && $conta_doc == 0) {
+	    		$valid=true;
+	    		$tipo_file=1;
+	    	}else{
+	    		$valid=false;
+	    		$error="Solo puede subir imagenes o solo un documento (Pdf, Word, Excel, PowerPoint)";
+	    	}
+	    }
+	    return array($valid, $tipo_file, $error);
+	}

@@ -1,0 +1,23 @@
+tareas hoy
+________________
+1.asistencia estdudiantes
+
+2. perfiles de grupos y post grupos
+
+3. lista de todos los grupos
+4. disciplina estudiantes(est, profe, tutor)
+5. completar registro usuario
+6. listar las publicaciones todos pero dar referencia donde en que grupo se publico.
+7. panel  de profesores
+	8. creacion de materias
+	9. publicaciones
+	10. listar grupos materias, profesores
+	11. notas de estudiantes
+	12. disciplina estudiantes
+
+13 notificaciones(pro, est, tuto, adm)- sin prioridad las notificaciones por megusta y publicaciones.
+
+
+
+
+
